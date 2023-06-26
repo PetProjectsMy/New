@@ -7,5 +7,5 @@ export function BuildDevServer(
 ): DevServerConfiguration {
   const { port } = options;
 
-  return { port, open: true };
+  return { port };
 }

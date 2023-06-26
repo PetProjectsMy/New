@@ -6,7 +6,7 @@ import { buildWebpackConfig } from './buildConfig';
 import { BuildMode, type BuildEnv, type BuildPaths } from './types/config';
 
 const buildPaths: BuildPaths = {
-  entry: resolvePathFromProjectRoot('src/index.ts'),
+  entry: resolvePathFromProjectRoot('src/index.tsx'),
   html: resolvePathFromProjectRoot('public/index.html'),
   build: resolvePathFromProjectRoot('dist'),
 };

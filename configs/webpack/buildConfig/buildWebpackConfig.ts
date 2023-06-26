@@ -28,6 +28,7 @@ export function buildWebpackConfig(buildOptions: BuildOptions): Configuration {
       clean: true,
     },
     plugins: buildPlugins({ htmlPath: paths.html }),
+    stats: 'errors-warnings',
   };
 
   if (isDev) {

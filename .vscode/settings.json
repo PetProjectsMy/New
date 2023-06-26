@@ -2,5 +2,6 @@
   "prettier.configPath": "configs/prettier/.prettierrc",
   "eslint.options": {
     "overrideConfigFile": "configs/eslint/.eslintrc.cjs"
-  }
+  },
+  "stylelint.configFile": "configs/stylelint/.stylelintrc.cjs"
 }
