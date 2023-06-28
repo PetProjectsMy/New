@@ -1,3 +1,5 @@
+skip_output: execution
+
 pre-commit:
   parallel: true
   commands:
@@ -10,6 +12,10 @@ pre-commit:
       glob: '*.{css,scss,sass,less}'
       run: pnpm lint:styles {staged_files}
 
-commit-msg:
-  commands:
-    run:
+    code-spell-check:
+      run: pnpm code-spell lint {staged_files}
+
+    filename-spell-check:
+      run: git diff --staged --name-only |
+        pnpm code-spell
+        --config=./configs/cspell/perFileConfigs/file-names-stdin.conf/config.cjs stdin
