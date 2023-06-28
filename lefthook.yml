@@ -1,0 +1,15 @@
+pre-commit:
+  parallel: true
+  commands:
+    format-then-lint-code:
+      glob: '*.{js,cjs,mjs,jsx,ts,tsx,html}'
+      run: pnpm format --write {staged_files} && pnpm lint:code {staged_files}
+      stage_fixed: true
+
+    lint:styles:
+      glob: '*.{css,scss,sass,less}'
+      run: pnpm lint:styles {staged_files}
+
+commit-msg:
+  commands:
+    run:

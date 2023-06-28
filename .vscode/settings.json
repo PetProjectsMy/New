@@ -1,7 +1,10 @@
 {
   "prettier.configPath": "configs/prettier/.prettierrc",
+  "prettier.ignorePath": "configs/prettier/.prettierignore",
   "eslint.options": {
     "overrideConfigFile": "configs/eslint/.eslintrc.cjs"
   },
-  "stylelint.configFile": "configs/stylelint/.stylelintrc.cjs"
+  "stylelint.configFile": "configs/stylelint/.stylelintrc.cjs",
+  "stylelint.validate": ["css", "scss", "less", "postcss"],
+  "cSpell.import": ["configs/cspell/cspell.config.cjs"]
 }
