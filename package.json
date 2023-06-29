@@ -9,7 +9,7 @@
     "format": "prettier --config=./configs/prettier/.prettierrc --ignore-path=./configs/prettier/.prettierignore",
     "lint:code": "eslint --config=./configs/eslint/.eslintrc.cjs",
     "lint:styles": "stylelint --config=./configs/stylelint/.stylelintrc.cjs --ignore-path=./configs/stylelint/.stylelintignore",
-    "code-spell": "cspell --config=./configs/cspell/cspell.config.cjs  --no-must-find-files"
+    "spell-check": "cspell --config=./configs/cspell/cspell.config.cjs  --no-must-find-files"
   },
   "keywords": [],
   "author": "",

@@ -13,9 +13,14 @@ pre-commit:
       run: pnpm lint:styles {staged_files}
 
     code-spell-check:
-      run: pnpm code-spell lint {staged_files}
+      run: pnpm spell-check lint {staged_files}
 
-    filename-spell-check:
+    filenames-spell-check:
       run: git diff --staged --name-only |
-        pnpm code-spell
+        pnpm spell-check
         --config=./configs/cspell/perFileConfigs/file-names-stdin.conf/config.cjs stdin
+
+commit-msg:
+  commands:
+    message-spell-check:
+      run: pnpm spell-check {1}
