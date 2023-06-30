@@ -3,7 +3,8 @@ const importsOrderRule = {
   'newlines-between': 'always',
   pathGroups: [
     {
-      pattern: '*.{sass}',
+      pattern: '*.{css,sass,scss,less}',
+      patternOptions: { matchBase: true },
       group: 'unknown',
       position: 'after',
     },

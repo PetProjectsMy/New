@@ -20,6 +20,9 @@ const eslintConfig = {
     importPluginConfig,
     utilsConfig,
   ],
+  rules: {
+    'no-console': 'warn',
+  },
 };
 
 module.exports = eslintConfig;
