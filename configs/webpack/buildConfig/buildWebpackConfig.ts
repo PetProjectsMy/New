@@ -19,7 +19,7 @@ export function buildWebpackConfig(buildOptions: BuildOptions): Configuration {
     mode,
     entry: paths.entry,
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders({ isDev }),
     },
     resolve: buildResolvers(),
     output: {
@@ -27,7 +27,7 @@ export function buildWebpackConfig(buildOptions: BuildOptions): Configuration {
       path: paths.build,
       clean: true,
     },
-    plugins: buildPlugins({ htmlPath: paths.html }),
+    plugins: buildPlugins({ htmlPath: paths.html, isDev }),
     stats: 'errors-warnings',
   };
 
