@@ -7,7 +7,7 @@
     "build:dev": "webpack --config=./configs/webpack/webpack.config.ts --env mode=development",
     "dev": "webpack serve --config=./configs/webpack/webpack.config.ts",
     "format": "prettier --config=./configs/prettier/.prettierrc --ignore-path=./configs/prettier/.prettierignore",
-    "lint:code": "eslint --config=./configs/eslint/.eslintrc.cjs",
+    "lint:code": "eslint --config=./configs/eslint/.eslintrc.cjs  --max-warnings=0",
     "lint:styles": "stylelint --config=./configs/stylelint/.stylelintrc.cjs --ignore-path=./configs/stylelint/.stylelintignore",
     "spell-check": "cspell --config=./configs/cspell/cspell.config.cjs  --no-must-find-files"
   },
@@ -33,6 +33,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
     "html-webpack-plugin": "^5.5.3",
     "lefthook": "^1.4.3",
     "mini-css-extract-plugin": "^2.7.6",
@@ -53,6 +54,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.0"
   }
 }

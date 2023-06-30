@@ -8,4 +8,4 @@ const htmlConfig = {
   },
 };
 
-module.exports = htmlConfig;
+module.exports = { htmlConfig };

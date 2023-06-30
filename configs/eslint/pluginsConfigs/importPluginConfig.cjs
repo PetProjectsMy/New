@@ -29,4 +29,4 @@ const importPluginConfig = {
   },
 };
 
-module.exports = importPluginConfig;
+module.exports = { importPluginConfig };

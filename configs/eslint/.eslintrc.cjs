@@ -1,25 +1,11 @@
-const {
-  htmlConfig,
-  javascriptConfig,
-  typescriptConfig,
-} = require('./languagesConfigs/index.cjs');
-const {
-  a11yPluginConfig,
-  importPluginConfig,
-  utilsConfig,
-} = require('./pluginsConfigs/index.cjs');
+const { languagesConfigOverride } = require('./languagesConfigs/_index.cjs');
+const { pluginsConfigOverride } = require('./pluginsConfigs/_index.cjs');
 
 const eslintConfig = {
   ignorePatterns: ['dist/', 'build/', 'node_modules/'],
   root: true,
-  overrides: [
-    htmlConfig,
-    javascriptConfig,
-    typescriptConfig,
-    a11yPluginConfig,
-    importPluginConfig,
-    utilsConfig,
-  ],
+  overrides: [...languagesConfigOverride, ...pluginsConfigOverride],
+
   rules: {
     'no-console': 'warn',
   },

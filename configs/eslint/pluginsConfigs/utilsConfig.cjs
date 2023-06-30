@@ -5,4 +5,4 @@ const utilsConfig = {
   },
 };
 
-module.exports = utilsConfig;
+module.exports = { utilsConfig };

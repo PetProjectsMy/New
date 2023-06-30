@@ -9,23 +9,12 @@ const typescriptConfig = {
   env: {
     browser: true,
   },
-  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
   ],
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
 };
 
-module.exports = typescriptConfig;
+module.exports = { typescriptConfig };
