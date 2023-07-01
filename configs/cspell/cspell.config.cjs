@@ -1,26 +1,22 @@
-const { resolvePathFromProjectRoot } = require('../utils/pathResolver.cjs');
+const {
+  resolvePathFromProjectRoot,
+} = require('../utils/pathResolver/pathResolver.cjs');
 
-const { packageJSONConfigPath } = require('./perFileConfigs/index.cjs');
+const { cspellIgnorePaths } = require('./cspell.ignore.cjs');
 
 const projectRootPath = resolvePathFromProjectRoot('./');
 const dictionariesDefinitionsConfigPath = './dictionaries/index.cjs';
+const perFileConfigsPath = './perFileConfigs/index.cjs';
 
 // As of time of creating this config,
 // 'import' option seems to work relative to the config file path
 // and no needs to use path.resolve
 const cspellConfig = {
-  version: '0.2',
   globRoot: projectRootPath,
+  ignorePaths: cspellIgnorePaths,
+  import: [dictionariesDefinitionsConfigPath, perFileConfigsPath],
   language: 'en,ru',
-  files: ['src/**'],
-  ignorePaths: [
-    'dist/',
-    'build/',
-    'node_modules/',
-    'pnpm-lock.yaml',
-    'dictionary.txt',
-  ],
-  import: [dictionariesDefinitionsConfigPath, packageJSONConfigPath],
+  version: '0.2',
 };
 
 module.exports = cspellConfig;

@@ -4,7 +4,7 @@ const {
 const { DICTIONARIES_NAMES } = require('../dictionariesNames.cjs');
 
 const packagesNamesDictionaryDefinition = createDictionaryDefinition(
-  DICTIONARIES_NAMES.PACKAGES_NAMES_DICTIONARY
+  DICTIONARIES_NAMES.WEBPACK_CONFIG_DICTIONARY
 );
 
 module.exports = packagesNamesDictionaryDefinition;

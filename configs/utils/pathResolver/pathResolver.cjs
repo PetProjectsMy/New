@@ -1,6 +1,6 @@
 const path = require('path');
 
-const PROJECT_ROOT_RELATIVE_PATH = '../../';
+const PROJECT_ROOT_RELATIVE_PATH = '../../../';
 
 /**
  * @param {string} fromRootRelativePath

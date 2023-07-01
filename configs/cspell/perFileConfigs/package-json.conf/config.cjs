@@ -5,8 +5,8 @@ const {
 const packageJSONConfig = {
   overrides: [
     {
-      filename: ['**/package.json'],
       dictionaries: [DICTIONARIES_NAMES.PACKAGES_NAMES_DICTIONARY],
+      filename: ['**/package.json'],
     },
   ],
 };
