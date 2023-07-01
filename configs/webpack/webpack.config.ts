@@ -1,14 +1,14 @@
 import webpack from 'webpack';
 
-import { resolvePathFromProjectRoot } from '../utils/pathResolver';
+import { resolvePathFromProjectRoot } from '../utils/pathResolver/pathResolver';
 
 import { buildWebpackConfig } from './buildConfig';
 import { BuildMode, type BuildEnv, type BuildPaths } from './types/config';
 
 const buildPaths: BuildPaths = {
+  build: resolvePathFromProjectRoot('dist'),
   entry: resolvePathFromProjectRoot('src/index.tsx'),
   html: resolvePathFromProjectRoot('public/index.html'),
-  build: resolvePathFromProjectRoot('dist'),
 };
 
 export default (env: BuildEnv) => {
@@ -17,8 +17,8 @@ export default (env: BuildEnv) => {
   const port = env.port || 3000;
 
   const webpackConfig: webpack.Configuration = buildWebpackConfig({
-    mode,
     isDev,
+    mode,
     paths: buildPaths,
     port,
   });

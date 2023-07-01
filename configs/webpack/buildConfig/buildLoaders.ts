@@ -9,9 +9,9 @@ export function buildLoaders(
   const { isDev } = options;
 
   const typescriptLoader = {
+    exclude: /node_modules/,
     test: /\.tsx?$/,
     use: 'ts-loader',
-    exclude: /node_modules/,
   };
 
   const stylesLoader = {
@@ -23,8 +23,8 @@ export function buildLoaders(
         options: {
           modules: {
             auto: /\w+.module.scss$/,
-            localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64]',
             localIdentHashDigestLength: 5,
+            localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64]',
           },
         },
       },

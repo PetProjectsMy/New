@@ -3,8 +3,8 @@ const { pluginsConfigOverride } = require('./pluginsConfigs/_index.cjs');
 
 const eslintConfig = {
   ignorePatterns: ['dist/', 'build/', 'node_modules/'],
-  root: true,
   overrides: [...languagesConfigOverride, ...pluginsConfigOverride],
+  root: true,
 
   rules: {
     'no-console': 'warn',

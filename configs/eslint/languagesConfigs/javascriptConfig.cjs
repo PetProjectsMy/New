@@ -1,11 +1,11 @@
 const javascriptConfig = {
-  files: ['**/*.{js,cjs}'],
-  extends: ['eslint:recommended'],
-  parserOptions: {
-    ecmaVersion: 'latest',
-  },
   env: {
     node: true,
+  },
+  extends: ['eslint:recommended'],
+  files: ['**/*.{js,cjs}'],
+  parserOptions: {
+    ecmaVersion: 'latest',
   },
 };
 

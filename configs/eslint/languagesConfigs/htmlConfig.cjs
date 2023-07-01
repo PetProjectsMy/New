@@ -1,8 +1,8 @@
 const htmlConfig = {
-  files: ['*.html'],
-  plugins: ['@html-eslint'],
-  parser: '@html-eslint/parser',
   extends: ['plugin:@html-eslint/recommended'],
+  files: ['*.html'],
+  parser: '@html-eslint/parser',
+  plugins: ['@html-eslint'],
   rules: {
     '@html-eslint/indent': ['error', 2],
   },
