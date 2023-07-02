@@ -1,11 +1,10 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+
 import type webpack from 'webpack';
 
 type BuildLoadersOptions = { isDev: boolean };
 
-export function buildLoaders(
-  options: BuildLoadersOptions
-): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildLoadersOptions): webpack.RuleSetRule[] {
   const { isDev } = options;
 
   const typescriptLoader = {

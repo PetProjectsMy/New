@@ -1,7 +1,6 @@
+import type { BuildOptions } from '../types/buildOptions';
 import type { Configuration as IWebpackConfiguration } from 'webpack';
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
-
-import type { BuildOptions } from '../types/config';
 
 import { BuildDevServer } from './buildDevServer';
 import { buildLoaders } from './buildLoaders';
@@ -15,25 +14,35 @@ type Configuration = WebpackConfiguration & {
 
 export function buildWebpackConfig(buildOptions: BuildOptions): Configuration {
   const { mode, paths, isDev, port } = buildOptions;
+
   const webpackConfig: UtilTypes.WithRequiredKeys<Configuration, 'output'> = {
-    mode,
     entry: paths.entry,
+    mode,
     module: {
       rules: buildLoaders({ isDev }),
     },
-    resolve: buildResolvers(),
+    optimization: {
+      splitChunks: {
+        chunks: 'async',
+        minChunks: 1,
+        minSize: 0,
+      },
+    },
     output: {
+      chunkFilename: 'chunks/[chunkhash].js',
+      clean: true,
       filename: '[name].[contenthash].js',
       path: paths.build,
-      clean: true,
     },
     plugins: buildPlugins({ htmlPath: paths.html, isDev }),
+    resolve: buildResolvers(),
     stats: 'errors-warnings',
   };
 
   if (isDev) {
     webpackConfig.devServer = BuildDevServer({ port });
     webpackConfig.output.filename = '[name].js';
+    webpackConfig.output.chunkFilename = 'chunks/[id].js';
     webpackConfig.devtool = 'inline-source-map';
   }
 

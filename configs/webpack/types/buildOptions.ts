@@ -3,20 +3,22 @@ export const enum BuildMode {
   PRODUCTION = 'production',
 }
 
-export type BuildEnv = {
+type BuildEnv = {
   mode?: BuildMode;
   port?: number;
 };
 
-export type BuildPaths = {
+type BuildPaths = {
   entry: string;
   html: string;
   build: string;
 };
 
-export type BuildOptions = {
+type BuildOptions = {
   mode: BuildMode;
   paths: BuildPaths;
   isDev: boolean;
   port: number;
 };
+
+export type { BuildEnv, BuildOptions, BuildPaths };

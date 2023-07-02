@@ -1,9 +1,10 @@
-import webpack from 'webpack';
+import type { BuildEnv, BuildPaths } from './types/buildOptions';
+import type webpack from 'webpack';
 
 import { resolvePathFromProjectRoot } from '../utils/pathResolver/pathResolver';
 
 import { buildWebpackConfig } from './buildConfig';
-import { BuildMode, type BuildEnv, type BuildPaths } from './types/config';
+import { BuildMode } from './types/buildOptions';
 
 const buildPaths: BuildPaths = {
   build: resolvePathFromProjectRoot('dist'),
