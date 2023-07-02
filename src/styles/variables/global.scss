@@ -1,0 +1,14 @@
+:root {
+  --font-family-main: consolas, 'Times New Roman', serif;
+
+  --font-line-medium: 24px;
+  --font-line-large: 32;
+
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
+
+  --font-medium: var(--font-size-medium) var(--font-line-medium)
+    var(--font-family-main);
+  --font-large: var(--font-size-large) var(--font-line-large)
+    var(--font-family-main);
+}

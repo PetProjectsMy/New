@@ -1,10 +1,21 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
-import { HelloWorldComponent } from './component';
+import { App } from './App';
+import { AppThemeProvider } from './theme/ThemeProvider';
 
-const domRoot = document.getElementById('root');
-if (!domRoot) {
+import './styles/index.scss';
+
+const domRootNode = document.getElementById('root');
+if (!domRootNode) {
   throw new Error('No root element found!');
 }
 
-ReactDOM.render(<HelloWorldComponent />, domRoot);
+const reactAppRoot = createRoot(domRootNode);
+reactAppRoot.render(
+  <BrowserRouter>
+    <AppThemeProvider>
+      <App />
+    </AppThemeProvider>
+  </BrowserRouter>
+);
