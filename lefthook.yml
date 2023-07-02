@@ -24,3 +24,4 @@ commit-msg:
   commands:
     message-spell-check:
       run: pnpm spell-check {1}
+        --config=configs/cspell/perFileConfigs/commit-message.conf/config.cjs

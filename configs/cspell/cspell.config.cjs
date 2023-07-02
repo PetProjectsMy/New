@@ -1,6 +1,4 @@
-const {
-  resolvePathFromProjectRoot,
-} = require('../utils/pathResolver/pathResolver.cjs');
+const { resolvePathFromProjectRoot } = require('../utils/pathResolver/pathResolver.cjs');
 
 const { cspellIgnorePaths } = require('./cspell.ignore.cjs');
 

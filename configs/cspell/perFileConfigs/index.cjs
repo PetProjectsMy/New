@@ -5,9 +5,7 @@ function resolvePath(pathString) {
 }
 
 const packageJSONConfigPath = resolvePath('./package-json.conf/config.cjs');
-const webpackSetupFilesConfigPath = resolvePath(
-  './webpack-config.conf/config.cjs'
-);
+const webpackSetupFilesConfigPath = resolvePath('./webpack-config.conf/config.cjs');
 
 const perFileConfigs = {
   import: [packageJSONConfigPath, webpackSetupFilesConfigPath],
