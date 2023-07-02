@@ -1,3 +1,6 @@
-const rules = {};
+const eslintRules = {
+  '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+  'no-console': 'warn',
+};
 
-module.exports = { rules };
+module.exports = { eslintRules };
