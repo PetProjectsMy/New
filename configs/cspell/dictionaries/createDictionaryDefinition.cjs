@@ -1,8 +1,6 @@
 const path = require('path');
 
-const {
-  getFunctionCallerPath,
-} = require('../../utils/functionCallerPath/functionCallerPath.cjs');
+const { getFunctionCallerPath } = require('../../utils/functionCallerPath/functionCallerPath.cjs');
 
 /**
  * function is supposed to only be called in the file

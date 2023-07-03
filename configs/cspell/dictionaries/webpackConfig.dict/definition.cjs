@@ -1,6 +1,4 @@
-const {
-  createDictionaryDefinition,
-} = require('../createDictionaryDefinition.cjs');
+const { createDictionaryDefinition } = require('../createDictionaryDefinition.cjs');
 const { DICTIONARIES_NAMES } = require('../dictionariesNames.cjs');
 
 const packagesNamesDictionaryDefinition = createDictionaryDefinition(

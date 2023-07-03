@@ -1,6 +1,4 @@
-const {
-  DICTIONARIES_NAMES,
-} = require('../../dictionaries/dictionariesNames.cjs');
+const { DICTIONARIES_NAMES } = require('../../dictionaries/dictionariesNames.cjs');
 
 const webpackSetupFilesConfig = {
   overrides: [

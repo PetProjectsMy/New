@@ -6,9 +6,7 @@ import { resolvePathFromProjectRoot } from '../../utils/pathResolver/pathResolve
 
 type PluginsOptions = { htmlPath: string; isDev: boolean };
 
-export function buildPlugins(
-  options: PluginsOptions
-): webpack.WebpackPluginInstance[] {
+export function buildPlugins(options: PluginsOptions): webpack.WebpackPluginInstance[] {
   const { htmlPath, isDev } = options;
 
   const htmlWebpackPlugin = new HtmlWebpackPlugin({
@@ -19,9 +17,7 @@ export function buildPlugins(
   const webpackProgressPlugin = new webpack.ProgressPlugin();
 
   const fileNameTemplate = `css/[name]${isDev ? '' : '.[contenthash]'}.css`;
-  const chunkFilenameTemplate = `css/[name].[id]${
-    isDev ? '' : '.[contenthash]'
-  }.css`;
+  const chunkFilenameTemplate = `css/[name].[id]${isDev ? '' : '.[contenthash]'}.css`;
   const miniCssExtractPlugin = new MiniCssExtractPlugin({
     chunkFilename: chunkFilenameTemplate,
     filename: fileNameTemplate,
