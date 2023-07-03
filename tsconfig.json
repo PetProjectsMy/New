@@ -7,6 +7,9 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "./dist/",
+    "paths": {
+      "@-utils/*": ["./src/utils/*"]
+    },
     "strict": true,
     "target": "es5",
     "typeRoots": ["./node_modules/@types/", "./utilTypes", "src/types"]
