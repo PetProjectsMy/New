@@ -6,7 +6,7 @@ const cspellIgnorePaths = [
   'node_modules/',
   'pnpm-lock.yaml',
   'dictionary.txt',
-  'src/styles/**/normalize.scss',
+  'src/**/normalize.scss',
   '**/*.{gif,png,svg}',
   '**/.prettierrc', // cspell:disable-line
   '**/.editorconfig',

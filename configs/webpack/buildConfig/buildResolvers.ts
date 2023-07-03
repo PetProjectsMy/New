@@ -1,11 +1,12 @@
-import type webpack from 'webpack';
-
 import { resolvePathFromProjectRoot } from '../../utils/pathResolver/pathResolver';
+
+import type webpack from 'webpack';
 
 export function buildResolvers(): webpack.ResolveOptions {
   return {
     alias: {
-      '@-utils': resolvePathFromProjectRoot('src/utils/'),
+      '@': resolvePathFromProjectRoot('src'),
+      '@-utils': resolvePathFromProjectRoot('src/shared/utils'),
     },
     extensions: ['.tsx', '.ts', '.js'],
   };

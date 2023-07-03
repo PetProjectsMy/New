@@ -8,11 +8,12 @@
     "noImplicitAny": true,
     "outDir": "./dist/",
     "paths": {
-      "@-utils/*": ["./src/utils/*"]
+      "@/*": ["./src/*"],
+      "@-utils/*": ["./src/shared/utils/*"]
     },
     "strict": true,
     "target": "es5",
-    "typeRoots": ["./node_modules/@types/", "./utilTypes", "src/types"]
+    "typeRoots": ["./node_modules/@types/", "./utilTypes", "src/app/types"]
   },
   "ts-node": {
     "compilerOptions": {

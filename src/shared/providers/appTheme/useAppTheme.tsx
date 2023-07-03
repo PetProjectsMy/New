@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { APP_THEME_LOCAL_STORAGE_KEY, AppTheme, AppThemeContext } from './themeContext';
+import { APP_THEME_LOCAL_STORAGE_KEY, AppTheme, AppThemeContext } from './AppThemeContext';
 
 type UseThemeResult = {
   toggleAppTheme: () => void;

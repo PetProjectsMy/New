@@ -1,11 +1,11 @@
-import { isObject } from './isObject';
+import { isObject } from '../objectsHandle';
 
-export { classNames };
+export { classnames };
 
 type ViaObjectClassesDefinition = Record<string, boolean>;
 type InputClass = string | ViaObjectClassesDefinition;
 
-function classNames(...inputClasses: InputClass[]): string {
+function classnames(...inputClasses: InputClass[]): string {
   const classesList: string[] = [];
   inputClasses.forEach(classDefinition => {
     if (typeof classDefinition === 'string') {

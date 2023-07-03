@@ -1,9 +1,9 @@
 import { useState, useMemo } from 'react';
 
-import type { AppThemeContextProps, AppTheme } from './themeContext';
-import type { FC, PropsWithChildren } from 'react';
+import { APP_THEME_DEFAULT, APP_THEME_LOCAL_STORAGE_KEY, AppThemeContext } from './AppThemeContext';
 
-import { APP_THEME_DEFAULT, APP_THEME_LOCAL_STORAGE_KEY, AppThemeContext } from './themeContext';
+import type { AppThemeContextProps, AppTheme } from './AppThemeContext';
+import type { FC, PropsWithChildren } from 'react';
 
 const appThemeSavedLocally =
   (localStorage.getItem(APP_THEME_LOCAL_STORAGE_KEY) as AppTheme) || APP_THEME_DEFAULT;

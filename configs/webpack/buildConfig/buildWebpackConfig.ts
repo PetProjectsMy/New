@@ -1,11 +1,11 @@
-import type { BuildOptions } from '../types/buildOptions';
-import type { Configuration as IWebpackConfiguration } from 'webpack';
-import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
-
 import { BuildDevServer } from './buildDevServer';
 import { buildLoaders } from './buildLoaders';
 import { buildPlugins } from './buildPlugins';
 import { buildResolvers } from './buildResolvers';
+
+import type { BuildOptions } from '../types/buildOptions';
+import type { Configuration as IWebpackConfiguration } from 'webpack';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 
 type WebpackConfiguration = UtilTypes.InterfaceToType<IWebpackConfiguration>;
 type Configuration = WebpackConfiguration & {
