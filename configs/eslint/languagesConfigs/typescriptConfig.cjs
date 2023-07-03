@@ -1,7 +1,5 @@
 const { resolvePathFromProjectRoot } = require('../../utils/pathResolver/pathResolver.cjs');
 
-const tsconfigPath = resolvePathFromProjectRoot('tsconfig.json');
-
 const typescriptConfig = {
   env: {
     browser: true,
@@ -14,7 +12,7 @@ const typescriptConfig = {
   files: ['**/*.{ts,tsx}'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: tsconfigPath,
+    project: resolvePathFromProjectRoot('tsconfig.json'),
   },
   plugins: ['@typescript-eslint'],
   rules: {

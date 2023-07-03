@@ -4,7 +4,7 @@ const importsOrderRuleOptions = {
     order: 'asc',
     orderImportKind: 'asc',
   },
-  groups: ['builtin', 'external', 'type', 'parent', 'sibling', 'index', 'unknown'],
+  groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'type', 'unknown'],
   'newlines-between': 'always',
   pathGroups: [
     {
@@ -12,6 +12,11 @@ const importsOrderRuleOptions = {
       pattern: '*.{css,sass,scss,less}',
       patternOptions: { matchBase: true },
       position: 'after',
+    },
+    {
+      group: 'parent',
+      pattern: '@/pages*',
+      position: 'before',
     },
   ],
   warnOnUnassignedImports: true,
